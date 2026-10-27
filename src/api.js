@@ -1,7 +1,7 @@
 // Food Verse AI - Indian Multimodal Food Intelligence API Service
-// Connects to FastAPI backend at http://localhost:8000 with authentic Indian client-side fallbacks
+// Connects to FastAPI backend - URL set via VITE_API_URL environment variable
 
-const API_BASE_URL = 'http://localhost:8000';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
 // 0. Backend status & telemetry ping
 export async function checkBackendStatus() {
